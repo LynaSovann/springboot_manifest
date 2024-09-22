@@ -10,6 +10,6 @@ spec:
     - protocol: TCP
       port: 90           
       targetPort: 8080   
-      nodePort: 8085    
+      nodePort: 31800    
 
   
