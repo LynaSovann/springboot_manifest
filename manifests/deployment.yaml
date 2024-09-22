@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: springboot-container
-          image: lynakiddy/springboot-img:28
+          image: lynakiddy/springboot-img:29
           ports:
             - containerPort: 8080
