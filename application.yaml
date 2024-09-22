@@ -9,11 +9,11 @@ spec:
   source:
     repoURL: https://github.com/LynaSovann/springboot_manifest.git
     targetRevision: argocd
-    path: manifests/
+    path: manifests
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: springboot-agrocd
   
   syncPolicy:
     automated:
