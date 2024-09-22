@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-argocd-deployment
+  labels:
+    app: springboot-argocd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springboot-argocd
+  template:
+    metadata:
+      labels:
+        app: springboot-argocd
+    spec:
+      containers:
+        - name: springboot-container
+          image: lynakiddy/springboot-img:16
+          ports:
+            - containerPort: 8080
