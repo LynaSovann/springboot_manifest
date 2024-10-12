@@ -1,25 +1,30 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: test-sb
-  namespace: argocd
-spec:
-  project: default
-  
-  source:
-    repoURL: https://github.com/LynaSovann/springboot_manifest.git
-    targetRevision: argocd
-    path: manifests
-
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: springboot-agrocd
-  
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
-
-  revisionHistoryLimit: 5
+{
+  "apiVersion": "argoproj.io/v1alpha1",
+  "kind": "Application",
+  "metadata": {
+    "name": "test-sb",
+    "namespace": "argocd"
+  },
+  "spec": {
+    "project": "default",
+    "source": {
+      "repoURL": "https://github.com/LynaSovann/springboot_manifest.git",
+      "targetRevision": "argocd",
+      "path": "manifests"
+    },
+    "destination": {
+      "server": "https://kubernetes.default.svc",
+      "namespace": "springboot-agrocd"
+    },
+    "syncPolicy": {
+      "automated": {
+        "prune": true,
+        "selfHeal": true
+      },
+      "syncOptions": [
+        "CreateNamespace=true"
+      ]
+    },
+    "revisionHistoryLimit": 5
+  }
+}
