@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: springboot-argocd-application
+  name: test-sb
   namespace: argocd
 spec:
   project: default
