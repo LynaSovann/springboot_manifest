@@ -3,7 +3,7 @@
   "kind": "Application",
   "metadata": {
     "name": "test-sb",
-    "namespace": "argocd"
+    "namespace": "new-ns"
   },
   "spec": {
     "project": "default",
