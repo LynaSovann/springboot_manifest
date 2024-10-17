@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: springboot-container
-          image: pipejet/lyna-projectname:49
+          image: pipejet/lyna-projectname:50
           ports:
             - containerPort: 8080
